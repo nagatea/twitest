@@ -36,4 +36,4 @@ if s < 10
     s_s = "0" << s_s
 end
 
-time_code = y_s + mon_s + d_s + h_s + min_s + s_s
+TIME_CODE = y_s + mon_s + d_s + h_s + min_s + s_s
