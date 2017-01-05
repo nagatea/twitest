@@ -11,5 +11,5 @@ client = Twitter::REST::Client.new do |config|
 end
 puts("読み込み完了")
 
-client.update("てすと")
+client.update("てすと\n改行てすと")
 puts("投稿しました！")
