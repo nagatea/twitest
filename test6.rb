@@ -11,6 +11,10 @@ client = Twitter::REST::Client.new do |config|
 end
 puts("読み込み完了")
 
-client.user_timeline(ARGV[0], { count: 200 } ).each do |timeline|
-  puts client.status(timeline.id).text
+if ARGV[0].to_s != "" && ARGV[1].to_i > 0
+    client.user_timeline(ARGV[0], { count: ARGV[1] } ).each do |timeline|
+        puts client.status(timeline.id).text
+    end
+else
+    puts("[EROOR]IDと数字をただしく入力してください")
 end
