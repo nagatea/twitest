@@ -8,10 +8,10 @@
 
 ## なに作ったかリスト
 
-- get_tl.rb
+- get_tl\_rest.rb
 
     - home_timelineを取得するコード
-    - 30秒ごとに更新するように設定しています
+    - 60秒ごとに更新するように設定しています(home_timelineの要求が15分に15回までのため)
 
 
 - get_tl\_stream.rb
