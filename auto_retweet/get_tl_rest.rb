@@ -21,12 +21,15 @@ while 1
 	
 	num.downto(0) do |i|
         username = client.status(update[i]).user.name # 発言者ID
+		userscreenname = client.status.user.screen_name
         contents = client.status(update[i]).text # 発言内容
-		str = username + ":" + contents
-		puts str
+		user_status = username + "(@" + userscreenname + ")"
+		puts user_status
+		puts contents
+		puts "-----"
 
 	end
 	hist = mytl
-	sleep(30)
+	sleep(60)
 	mytl = client.home_timeline
 end

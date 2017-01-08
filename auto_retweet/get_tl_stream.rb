@@ -17,16 +17,12 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = MY_ACCESS_TOKEN_SECRET
 end
 
-user_screen_name = client.user.name
-
 puts("読み込み完了")
-
-# TL取得
 
 stream_client.user do |status|
     if status.is_a?(Twitter::Tweet)
-      puts "#{status.user.name} (#{status.user.screen_name})"
+      puts "#{status.user.name} (@#{status.user.screen_name})"
       puts status.text
-      puts '---'
+      puts '-----'
     end
 end
