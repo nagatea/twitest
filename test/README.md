@@ -28,8 +28,10 @@
 
 - test5.rb
 
-    - 指定したIDをフォローするコード
-    - ついでにフォローしたことをツイートします
+    - 指定したIDをフォローorリムーブするコード
+    - ついでにフォローorリムーブしたことをツイートします
+    
+    $ ruby test5.rb [user_id] [follow or unfollow]
 
 - test6.rb
 
