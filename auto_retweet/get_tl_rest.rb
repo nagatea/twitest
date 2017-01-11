@@ -21,7 +21,7 @@ while 1
 	
 	num.downto(0) do |i|
         username = client.status(update[i]).user.name # 発言者ID
-		userscreenname = client.status.user.screen_name
+		userscreenname = client.status(update[i]).user.screen_name
         contents = client.status(update[i]).text # 発言内容
 		user_status = username + "(@" + userscreenname + ")"
 		puts user_status
