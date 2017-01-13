@@ -18,3 +18,8 @@
 
     - streamAPIを用いてTLを取得するコード
     - 参考→[RubyでTwitterにStreaming接続してbotを作ってるお話 - Wakotech Blog](http://yutaszk23.hatenadiary.jp/entry/2014/06/05/142337)
+
+- get_tl.rb
+
+    - restAPIとstreamAPIを組み合わせて古いTLと新しいTLを取得するコード
+    - 見てる分にはなんかちゃんとしたクライアントっぽい
