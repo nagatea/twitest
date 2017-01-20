@@ -19,6 +19,7 @@ end
 
 puts("読み込み完了")
 
+begin
 stream_client.user do |status|
     if status.is_a?(Twitter::Tweet)
       puts "#{status.user.name} (@#{status.user.screen_name})"
@@ -27,3 +28,7 @@ stream_client.user do |status|
       client.favorite(status.id)
     end
 end
+rescue => exception
+ puts "エラー発生"  
+end
+
