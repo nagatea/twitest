@@ -36,4 +36,4 @@ if s < 10
     s_s = "0" << s_s
 end
 
-TIME_CODE = y_s + mon_s + d_s + h_s + min_s + s_s
+TIME_CODE = "[" + y_s + "/" + mon_s + "/" + d_s + " " + h_s + "時" + min_s + "分" + s_s + "秒]" 
