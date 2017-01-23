@@ -26,7 +26,7 @@ stream_client.user do |status|
       puts status.text
       puts status
       puts '-----'
-      if status.text == "ちーず"
+      if  /ちーず/ === status.text
           client.update("@#{status.user.screen_name} けーき #{TIME_CODE}", options = {:in_reply_to_status_id => status.id})
           end
     end
