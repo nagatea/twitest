@@ -19,11 +19,28 @@ def change_username
   @client.update_profile(name: username)
   @client.update("名前を変更しました。\n#{TIME_CODE}")
 end
+
+def return_username
+  username = @client.user.name.to_s
+  new_username = username.match(/(.+)@.+/)
+  if new_username[1] != nil
+    @client.update_profile(name: new_username[1])
+    @client.update("名前を変更しました。\n#{TIME_CODE}")
+  end
 end
 
 puts("読み込み完了")
 
 test = Change_username.new
 
-test.change_username()
-
+print ("input Change[1] or Return[2] => ")
+n = gets.to_i
+case n
+  when 1
+    test.change_username()
+  when 2
+    test.return_username()
+  else
+    puts ("[ERROR]入力された文字が正しくありません。")
+end
+end
